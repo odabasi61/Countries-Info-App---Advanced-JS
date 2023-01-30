@@ -1,0 +1,267 @@
+@import url("https://fonts.google.com/specimen/Outfit");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: "Nunito Sans", sans-serif;
+  --bgColor: hsl(0, 0%, 98%);
+  --fontcolor: hsl(218, 44%, 22%);
+}
+
+.dark {
+  --bgColor: hsl(207, 26%, 17%);
+  --fontcolor: hsl(0, 0%, 98%);
+  background: var(--bgColor);
+  color: var(--fontcolor);
+  --countryBgColor: hsl(209, 23%, 22%);
+}
+
+.container {
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container:nth-child(1) {
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  background: var(--countryBgColor);
+}
+
+button {
+  outline: none;
+  border: 0;
+  background: transparent;
+  color: var(--fontcolor);
+}
+
+.toggle {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--fontcolor);
+}
+
+.toggle i {
+  padding-right: 0.5rem;
+}
+
+.form-control {
+  width: 40rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--countryBgColor);
+}
+
+.form-control input {
+  width: 100%;
+  padding: 1.7rem 1.4rem;
+  outline: 0;
+  border: 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  background: transparent;
+  color: var(--fontcolor);
+}
+
+.form-control i {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+}
+
+i {
+  cursor: pointer;
+}
+
+.dropDownCon {
+  width: 20rem;
+  position: relative;
+  background: var(--countryBgColor);
+  border-radius: 0.5rem;
+}
+
+.dropDown {
+  width: 100%;
+  padding: 1.7rem 1.4rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.dropDown p {
+  letter-spacing: 0.5px;
+}
+
+.drop {
+  position: absolute;
+  top: 7.2rem;
+  padding: 1.7rem 1.4rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  width: 100%;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: var(--countryBgColor);
+  /* background: var(--bgColor); */
+}
+
+.drop p {
+  margin: 0.5rem 0;
+}
+
+.countries {
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 2rem;
+}
+
+.country {
+  min-height: 30rem;
+  width: 30rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--countryBgColor);
+}
+
+.country-img {
+  height: 20rem;
+}
+
+.country-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.country-info {
+  padding: 2rem 1.7rem;
+}
+
+.country-info h5 {
+  padding: 0.8rem 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.country-info p > strong {
+  font-weight: 600;
+}
+
+.country-img p {
+  letter-spacing: 1px;
+}
+
+.showDropDown {
+  display: none;
+}
+
+.countryModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bgColor);
+  padding: 3rem;
+}
+
+.back {
+  position: absolute;
+  top: 5rem;
+  left: 3rem;
+  background: var(--countryBgColor);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 4rem;
+}
+
+.leftModal,
+.rightModal {
+  width: 50%;
+}
+
+.leftModal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rightModal h1 {
+  padding-bottom: 3rem;
+  letter-spacing: 1px;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.modalInfo {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.inner p > strong {
+  font-weight: 600;
+}
+
+.inner p {
+  padding-bottom: 0.5rem;
+}
+
+.show {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .modal {
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .rightModal h1 {
+    letter-spacing: 0.5px;
+    font-size: 3rem;
+  }
+
+  .leftModal,
+  .rightModal {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .modalInfo {
+    flex-direction: column;
+  }
+  .rightModal h1 {
+    font-size: 2.5rem;
+  }
+}
